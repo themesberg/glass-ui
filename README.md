@@ -10,7 +10,7 @@
 
 Glassmorphism UI is a project that we're still working on. If you're interested by the progress and want to be one of the first to be notified when the project is launched, check out [ui.glass](https://ui.glass/) and subscribe to the email list.
 
-## Existing projects:
+## Related projects:
 
 - [Glassmorphism CSS Generator](https://generator.ui.glass)
 - [Glassmorphism UI CSS Library](https://ui.glass) (work in progress)

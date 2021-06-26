@@ -13,3 +13,4 @@ Glassmorphism UI is a project that we're still working on. If you're interested 
 ## Existing projects:
 
 - [Glassmorphism CSS Generator](https://generator.ui.glass)
+- [Glassmorphism UI CSS Library](https://ui.glass) (work in progress)

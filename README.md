@@ -1,14 +1,14 @@
-# Glassmorphism UI
+# Glass UI - CSS UI Library based on Glassmorphism
 
 <a href="https://ui.glass/" target="_blank">
-<img alt="Glassmorphism UI" src="https://s3.us-east-2.amazonaws.com/ui.glass/preview.png">
+<img alt="Glass UI" src="https://s3.us-east-2.amazonaws.com/ui.glass/preview.png">
 </a>
 
 ------
 
 ## Work in progress
 
-Glassmorphism UI is a project that we're still working on. If you're interested by the progress and want to be one of the first to be notified when the project is launched, check out [ui.glass](https://ui.glass/) and subscribe to the email list.
+Glass UI is a project that we're still working on. If you're interested by the progress and want to be one of the first to be notified when the project is launched, check out [ui.glass](https://ui.glass/) and subscribe to the email list.
 
 ## Related projects:
 
@@ -17,4 +17,4 @@ Glassmorphism UI is a project that we're still working on. If you're interested 
 
 ## Learn more:
 
-- [Glassmorphism tutorial](https://themesberg.com/blog/glassmorphism/tutorial)
+- [Glassmorphism Tutorial](https://themesberg.com/blog/glassmorphism/tutorial)

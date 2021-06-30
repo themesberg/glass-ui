@@ -1,4 +1,4 @@
-# Glass UI - CSS UI Library based on Glassmorphism
+# Glass UI
 
 <a href="https://ui.glass/" target="_blank">
 <img alt="Glass UI" src="https://s3.us-east-2.amazonaws.com/ui.glass/preview.png">
@@ -12,7 +12,7 @@ Glass UI is a project that we're still working on. If you're interested by the p
 
 ## Related projects:
 
-- [Glassmorphism CSS Generator](https://generator.ui.glass)
+- [Glassmorphism CSS Generator](https://ui.glass/generator/)
 - [Glassmorphism UI CSS Library](https://ui.glass) (work in progress)
 
 ## Learn more:

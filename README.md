@@ -30,5 +30,5 @@ Complete brand identity and documentation for Quirkable - a UK 3D printing servi
 - [Homepage Copy](./quirkable/homepage-copy.md)
 - [Brand Story](./quirkable/brand-story.md)
 - [Service Pages](./quirkable/pages/) - Individual landing pages for all 4 services
+- [Social Media Launch](./quirkable/social-media-launch.md) - Platform-specific content
 - [Brand Identity](./quirkable/brand-identity.md)
-- [Services Overview](./quirkable/docs/services.md)

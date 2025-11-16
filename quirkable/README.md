@@ -36,6 +36,12 @@ No file? No problem. We design from scratch, convert 2D drawings into 3D, develo
 - **[Homepage Copy](./homepage-copy.md)** - Complete landing page content and structure
 - **[Brand Story](./brand-story.md)** - The story behind Quirkable (About page content)
 
+### Service Pages (Individual Landing Pages)
+- **[Ready-Made 3D Models](./pages/ready-made-models.md)** - Quirkable Originals service page
+- **[Bespoke Printing Service](./pages/bespoke-printing.md)** - Custom printing service page
+- **[File Fixing & Repair](./pages/file-repair.md)** - File repair service page
+- **[Full Design Service](./pages/design-service.md)** - Custom 3D design service page
+
 ### Brand Guidelines
 - **[Brand Identity](./brand-identity.md)** - Complete brand identity snapshot
 - **[Tone of Voice](./docs/tone-of-voice.md)** - Communication guidelines

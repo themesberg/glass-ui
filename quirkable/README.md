@@ -32,6 +32,7 @@ No file? No problem. We design from scratch, convert 2D drawings into 3D, develo
 
 ## Documentation
 
+- **[Brand Story](./brand-story.md)** - The story behind Quirkable (About page content)
 - **[Brand Identity](./brand-identity.md)** - Complete brand identity snapshot
 - **[Services](./docs/services.md)** - Detailed service descriptions
 - **[Target Market](./docs/target-market.md)** - Market segments and positioning

@@ -18,3 +18,16 @@ Glass UI is a project that we're still working on. If you're interested by the p
 ## Learn more:
 
 - [Glassmorphism Tutorial](https://themesberg.com/blog/glassmorphism/tutorial)
+
+------
+
+## Projects in this Repository
+
+### [Quirkable](./quirkable/)
+Complete brand identity and documentation for Quirkable - a UK 3D printing service specializing in creativity, precision, and customer obsession. Includes comprehensive brand guidelines, service descriptions, target market analysis, and customer journey mapping.
+
+**Quick links:**
+- [Brand Identity](./quirkable/brand-identity.md)
+- [Services Overview](./quirkable/docs/services.md)
+- [Target Market](./quirkable/docs/target-market.md)
+- [Tone of Voice](./quirkable/docs/tone-of-voice.md)

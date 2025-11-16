@@ -47,6 +47,7 @@ No file? No problem. We design from scratch, convert 2D drawings into 3D, develo
 
 ### Brand Guidelines
 - **[Brand Identity](./brand-identity.md)** - Complete brand identity snapshot
+- **[Visual Identity & Logo](./visual-identity.md)** - Logo concepts, colors, typography, design system
 - **[Tone of Voice](./docs/tone-of-voice.md)** - Communication guidelines
 
 ### Business Documentation

@@ -27,8 +27,8 @@ Glass UI is a project that we're still working on. If you're interested by the p
 Complete brand identity and documentation for Quirkable - a UK 3D printing service specializing in creativity, precision, and customer obsession. Includes comprehensive brand guidelines, service descriptions, target market analysis, and customer journey mapping.
 
 **Quick links:**
+- [Homepage Copy](./quirkable/homepage-copy.md)
 - [Brand Story](./quirkable/brand-story.md)
 - [Brand Identity](./quirkable/brand-identity.md)
 - [Services Overview](./quirkable/docs/services.md)
-- [Target Market](./quirkable/docs/target-market.md)
 - [Tone of Voice](./quirkable/docs/tone-of-voice.md)

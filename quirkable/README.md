@@ -32,12 +32,18 @@ No file? No problem. We design from scratch, convert 2D drawings into 3D, develo
 
 ## Documentation
 
+### Website Content
+- **[Homepage Copy](./homepage-copy.md)** - Complete landing page content and structure
 - **[Brand Story](./brand-story.md)** - The story behind Quirkable (About page content)
+
+### Brand Guidelines
 - **[Brand Identity](./brand-identity.md)** - Complete brand identity snapshot
+- **[Tone of Voice](./docs/tone-of-voice.md)** - Communication guidelines
+
+### Business Documentation
 - **[Services](./docs/services.md)** - Detailed service descriptions
 - **[Target Market](./docs/target-market.md)** - Market segments and positioning
 - **[Customer Journey](./docs/customer-journey.md)** - How Quirkable works
-- **[Tone of Voice](./docs/tone-of-voice.md)** - Communication guidelines
 
 ---
 

@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --quirkable-blue: #2d5bff;
+  --quirkable-charcoal: #1a1a1a;
+  --quirkable-teal: #14b8a6;
+  --quirkable-purple: #8b5cf6;
+  --quirkable-orange: #f97316;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  color: var(--quirkable-charcoal);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-weight: 700;
+}
+
+code,
+pre {
+  font-family: 'JetBrains Mono', monospace;
+}

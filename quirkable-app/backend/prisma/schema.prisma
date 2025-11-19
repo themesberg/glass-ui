@@ -1,0 +1,260 @@
+// Quirkable Database Schema
+// British English spelling used throughout
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum UserRole {
+  CUSTOMER
+  ADMIN
+}
+
+enum ServiceType {
+  READY_MADE
+  BESPOKE
+  FILE_REPAIR
+  DESIGN
+}
+
+enum OrderStatus {
+  PENDING
+  QUOTE_SENT
+  IN_PROGRESS
+  COMPLETED
+  DELIVERED
+  CANCELLED
+}
+
+enum PrintMaterial {
+  PLA
+  ABS
+  PETG
+  TPU
+  NYLON
+  RESIN
+}
+
+enum PrintQuality {
+  STANDARD
+  HIGH
+  ULTRA
+}
+
+enum DesignComplexity {
+  SIMPLE
+  MODERATE
+  COMPLEX
+}
+
+enum RepairType {
+  FIX_ONLY
+  FIX_AND_PRINT
+}
+
+model User {
+  id            String   @id @default(uuid())
+  email         String   @unique
+  passwordHash  String
+  firstName     String
+  lastName      String
+  role          UserRole @default(CUSTOMER)
+  phoneNumber   String?
+  emailVerified Boolean  @default(false)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  // Relations
+  bespokeRequests    BespokeRequest[]
+  fileRepairRequests FileRepairRequest[]
+  designRequests     DesignRequest[]
+  cartItems          CartItem[]
+  orders             Order[]
+
+  @@index([email])
+}
+
+model ReadyMadeModel {
+  id          String        @id @default(uuid())
+  name        String
+  description String
+  category    String
+  price       Int // in pence
+  images      String[] // Array of image URLs
+  materials   PrintMaterial[]
+  printTime   Int // in minutes
+  length      Float // in mm
+  width       Float // in mm
+  height      Float // in mm
+  weight      Float // in grams
+  popularity  Int           @default(0)
+  inStock     Boolean       @default(true)
+  tags        String[]
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+
+  // Relations
+  cartItems   CartItem[]
+  orderItems  OrderItem[]
+
+  @@index([category])
+  @@index([inStock])
+  @@index([popularity])
+}
+
+model ColourOption {
+  id        String        @id @default(uuid())
+  name      String
+  hexCode   String
+  material  PrintMaterial
+  available Boolean       @default(true)
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
+
+  @@unique([name, material])
+  @@index([material])
+}
+
+model BespokeRequest {
+  id                String       @id @default(uuid())
+  userId            String
+  fileUrl           String
+  fileName          String
+  fileSize          Int // in bytes
+  material          PrintMaterial?
+  colour            String?
+  quality           PrintQuality @default(STANDARD)
+  quantity          Int          @default(1)
+  notes             String?
+  status            OrderStatus  @default(PENDING)
+  quoteAmount       Int? // in pence
+  estimatedDelivery DateTime?
+  createdAt         DateTime     @default(now())
+  updatedAt         DateTime     @updatedAt
+
+  // Relations
+  user              User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([status])
+}
+
+model FileRepairRequest {
+  id               String      @id @default(uuid())
+  userId           String
+  fileUrl          String
+  fileName         String
+  fileSize         Int // in bytes
+  issueDescription String
+  repairType       RepairType  @default(FIX_ONLY)
+  material         PrintMaterial?
+  colour           String?
+  status           OrderStatus @default(PENDING)
+  quoteAmount      Int? // in pence
+  repairedFileUrl  String?
+  createdAt        DateTime    @default(now())
+  updatedAt        DateTime    @updatedAt
+
+  // Relations
+  user             User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([status])
+}
+
+model DesignRequest {
+  id                String            @id @default(uuid())
+  userId            String
+  projectName       String
+  description       String
+  referenceImages   String[] // Array of image URLs
+  designComplexity  DesignComplexity  @default(MODERATE)
+  includePrinting   Boolean           @default(false)
+  material          PrintMaterial?
+  colour            String?
+  quantity          Int               @default(1)
+  status            OrderStatus       @default(PENDING)
+  quoteAmount       Int? // in pence
+  designFileUrl     String?
+  estimatedDelivery DateTime?
+  createdAt         DateTime          @default(now())
+  updatedAt         DateTime          @updatedAt
+
+  // Relations
+  user              User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([status])
+}
+
+model CartItem {
+  id           String        @id @default(uuid())
+  userId       String
+  modelId      String?
+  serviceType  ServiceType
+  requestId    String? // Reference to bespoke/repair/design request
+  material     PrintMaterial
+  colour       String
+  quality      PrintQuality  @default(STANDARD)
+  quantity     Int           @default(1)
+  pricePerUnit Int // in pence
+  addedAt      DateTime      @default(now())
+
+  // Relations
+  user         User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  model        ReadyMadeModel? @relation(fields: [modelId], references: [id], onDelete: SetNull)
+
+  @@index([userId])
+}
+
+model Order {
+  id             String      @id @default(uuid())
+  userId         String
+  totalAmount    Int // in pence
+  status         OrderStatus @default(PENDING)
+  trackingNumber String?
+  createdAt      DateTime    @default(now())
+  updatedAt      DateTime    @updatedAt
+  completedAt    DateTime?
+
+  // Address fields (embedded)
+  addressLine1   String
+  addressLine2   String?
+  city           String
+  county         String
+  postcode       String
+  country        String      @default("United Kingdom")
+
+  // Relations
+  user           User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  items          OrderItem[]
+
+  @@index([userId])
+  @@index([status])
+  @@index([createdAt])
+}
+
+model OrderItem {
+  id           String         @id @default(uuid())
+  orderId      String
+  modelId      String?
+  serviceType  ServiceType
+  requestId    String? // Reference to bespoke/repair/design request
+  material     PrintMaterial
+  colour       String
+  quality      PrintQuality
+  quantity     Int
+  pricePerUnit Int // in pence
+  createdAt    DateTime       @default(now())
+
+  // Relations
+  order        Order          @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  model        ReadyMadeModel? @relation(fields: [modelId], references: [id], onDelete: SetNull)
+
+  @@index([orderId])
+}

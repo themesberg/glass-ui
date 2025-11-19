@@ -38,6 +38,7 @@ No file? No problem. We design from scratch, convert 2D drawings into 3D, develo
 
 ### Marketing Content
 - **[Social Media Launch Posts](./social-media-launch.md)** - Platform-specific launch content and strategy
+- **[Taglines & Slogans](./taglines-slogans.md)** - Memorable brand phrases and positioning statements
 
 ### Service Pages (Individual Landing Pages)
 - **[Ready-Made 3D Models](./pages/ready-made-models.md)** - Quirkable Originals service page
@@ -51,6 +52,7 @@ No file? No problem. We design from scratch, convert 2D drawings into 3D, develo
 - **[Tone of Voice](./docs/tone-of-voice.md)** - Communication guidelines
 
 ### Business Documentation
+- **[Business Model Canvas](./business-model-canvas.md)** - Strategic business planning framework
 - **[Services](./docs/services.md)** - Detailed service descriptions
 - **[Target Market](./docs/target-market.md)** - Market segments and positioning
 - **[Customer Journey](./docs/customer-journey.md)** - How Quirkable works

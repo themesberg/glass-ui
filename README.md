@@ -32,3 +32,7 @@ Complete brand identity and documentation for Quirkable - a UK 3D printing servi
 - [Service Pages](./quirkable/pages/) - Individual landing pages for all 4 services
 - [Visual Identity & Logo](./quirkable/visual-identity.md) - Colors, typography, design system
 - [Social Media Launch](./quirkable/social-media-launch.md) - Platform-specific content
+- [Taglines & Slogans](./quirkable/taglines-slogans.md) - Brand phrases
+- [Business Model Canvas](./quirkable/business-model-canvas.md) - Strategic framework
+
+**[View Full Documentation →](./quirkable/README.md)**

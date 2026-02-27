@@ -6,17 +6,12 @@ import Link from "next/link"
 export default function Home() {
   return (
     <div className="relative min-h-screen flex flex-col">
-      {/* Full-height vertical lines spanning the entire document */}
-      <div className="pointer-events-none absolute inset-0 flex justify-center z-50">
-        <div className="container mx-auto h-full border-x border-border/50" />
-      </div>
-
       <Navbar />
 
       <main className="flex-1 flex flex-col">
         {/* Hero Section */}
-        <section className="border-y border-border relative overflow-hidden">
-          <div className="container mx-auto flex flex-col items-start gap-8 text-left px-4 md:px-8 py-24 md:py-32 lg:py-48 relative z-10">
+        <section className="flex-1 flex flex-col justify-center relative overflow-hidden">
+          <div className="container mx-auto flex flex-col items-start gap-8 text-left px-4 md:px-8 py-12 relative z-10">
             <h1 className="font-sans text-6xl font-extrabold tracking-tighter sm:text-7xl md:text-8xl lg:text-9xl lg:leading-[0.9] max-w-7xl">
               Glass UI
             </h1>
@@ -39,6 +34,11 @@ export default function Home() {
       </main>
 
       <Footer />
+
+      {/* Full-height vertical lines spanning the entire document */}
+      <div className="pointer-events-none absolute inset-0 flex justify-center z-[100]">
+        <div className="container mx-auto h-full border-x border-border/50" />
+      </div>
     </div>
   )
 }
